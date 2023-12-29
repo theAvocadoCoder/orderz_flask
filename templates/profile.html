@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Dashboard
+{% endblock %}
+
+{% block main %}
+    <h1 class="text-green-600 font-bold">Profile Page</h1>
+    <ul>
+        {% for i in range(10) %}
+        <li>This is profile list item number {{ i }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
