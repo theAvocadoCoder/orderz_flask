@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <div class="flex flex-col items-center">
+        <img class="mx-auto my-5" src="{{ url_for('static',filename='orderz_logo.svg') }}" alt="" />
+        <h1 class="text-lg font-bold mb-5">{% block title %}Sign Up{% endblock %}</h1>
+        <form action="/signup" method="post" class="[&>input]:text-black">
+            {% include 'components/form_errors.html' %}
+            <div class="mb-3 w-full">
+                <input autofocus id="email" name="email" placeholder="Email" type="email" class="mx-auto w-full" value="{{ data.email }}">
+            </div>
+            <div class="mb-3 w-full">
+                <input autofocus id="username" name="username" placeholder="Username" type="text" class="mx-auto w-full" value="{{ data.username }}">
+            </div>
+            <div class="mb-3 w-full">
+                <input id="password" name="password" placeholder="Password" type="password" class="mx-auto w-full" value="{{ data.password }}">
+            </div>
+            <div class="mb-3 w-full">
+                <input id="confirmation" name="confirmation" placeholder="Confirm Password" type="password" class="mx-auto w-full" value="">
+            </div>
+            <button class="flex items-center justify-center border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-semibold dark:border-blue-500 dark:text-blue-500 hover:dark:bg-blue-500 w-full px-2 py-3" type="submit">Sign Up</button>
+        </form>
+        <p class="text-[.75rem] opacity-80 my-3">Already have an account? <a href="/signin" class="text-blue-600 dark:text-blue-400 font-bold">Sign In</a>.</p>
+    </div>
+{% endblock %}

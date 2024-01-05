@@ -7,8 +7,8 @@
 {% block main %}
     <h1 class="text-green-600 font-bold">Hello User</h1>
     <ul>
-        {% for i in range(10) %}
-        <li>This is list item number {{ i }}</li>
+        {% for order in orders %}
+        <li><strong>{{ order.order_name }}</strong>: You have to deliver {{ order.item_amount }} {{ order.item_name }} to {{ order.client_firstname }} {{ order.client_lastname }}</li>
         {% endfor %}
     </ul>
 {% endblock %}
