@@ -1,0 +1,46 @@
+{
+	"info": {
+		"_postman_id": "cde4ef23-97ff-453b-b63f-7b1473b7fd7d",
+		"name": "Authentication",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "16773773-cde4ef23-97ff-453b-b63f-7b1473b7fd7d"
+	},
+	"item": [
+		{
+			"name": "Sign In",
+			"id": "5637e587-2dcc-4f2f-8e4a-bce28b8e9dc4",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "johnDoe",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "A123!",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{DOMAIN}}/signin",
+					"host": [
+						"{{DOMAIN}}"
+					],
+					"path": [
+						"signin"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
